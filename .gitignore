@@ -1,1 +1,3 @@
 .nvim/
+test/
+.vscode/
