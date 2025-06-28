@@ -14,7 +14,8 @@
     "jsr:@std/internal@^1.0.7": "1.0.8",
     "jsr:@std/path@0.217": "0.217.0",
     "jsr:@std/path@1": "1.1.0",
-    "jsr:@std/path@^1.1.0": "1.1.0"
+    "jsr:@std/path@^1.1.0": "1.1.0",
+    "npm:drizzle-orm@~0.44.2": "0.44.2"
   },
   "jsr": {
     "@db/sqlite@0.12.0": {
@@ -74,11 +75,18 @@
       "integrity": "ddc94f8e3c275627281cbc23341df6b8bcc874d70374f75fec2533521e3d6886"
     }
   },
+  "npm": {
+    "drizzle-orm@0.44.2": {
+      "integrity": "sha512-zGAqBzWWkVSFjZpwPOrmCrgO++1kZ5H/rZ4qTGeGOe18iXGVJWf3WPfHOVwFIbmi8kHjfJstC6rJomzGx8g/dQ==",
+      "tarball": "https://registry.npmmirror.com/drizzle-orm/-/drizzle-orm-0.44.2.tgz"
+    }
+  },
   "workspace": {
     "dependencies": [
       "jsr:@db/sqlite@0.12",
       "jsr:@std/assert@1",
-      "jsr:@std/expect@^1.0.16"
+      "jsr:@std/expect@^1.0.16",
+      "npm:drizzle-orm@~0.44.2"
     ]
   }
 }
