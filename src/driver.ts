@@ -1,18 +1,29 @@
 import {
   entityKind,
-  DrizzleConfig,
+  type DrizzleConfig,
   DefaultLogger,
   createTableRelationsHelpers,
   extractTablesRelationalConfig,
-  RelationalSchemaConfig,
-  TablesRelationalConfig
+  type RelationalSchemaConfig,
+  type TablesRelationalConfig
 } from 'drizzle-orm'
 import { BaseSQLiteDatabase, SQLiteSyncDialect } from 'drizzle-orm/sqlite-core'
-import { Database, DatabaseOpenOptions } from '@db/sqlite'
-import { RunResult } from './utils.ts'
+import { Database, type DatabaseOpenOptions } from '@db/sqlite'
+import type { RunResult } from './utils.ts'
 import { DBSQLiteSession } from './session.ts'
 
 // % drizzle %
+/**
+ * Create a new instance of the `DBSQLiteDatabase` class.
+ * @param path The path to the SQLite database file.
+ * @param options https://jsr.io/@db/sqlite/doc/~/DatabaseOpenOptions
+ * @param config {
+     logger?: boolean | Logger;
+     schema?: TSchema;
+     casing?: Casing;
+     cache?: Cache;
+   }
+ */
 export const drizzle = <
   TSchema extends Record<string, unknown> = Record<string, never>
 >(

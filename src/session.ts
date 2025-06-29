@@ -1,30 +1,30 @@
 import {
   entityKind,
-  Logger,
+  type Logger,
   NoopLogger,
-  Query,
-  RelationalSchemaConfig,
-  TablesRelationalConfig,
+  type Query,
+  type RelationalSchemaConfig,
+  type TablesRelationalConfig,
   sql,
   fillPlaceholders,
-  AnyColumn,
-  SelectedFieldsOrdered as BaseSelectedFieldsOrdered
+  type AnyColumn,
+  type SelectedFieldsOrdered as BaseSelectedFieldsOrdered
 } from 'drizzle-orm'
 import {
-  PreparedQueryConfig,
-  SQLiteExecuteMethod,
+  type PreparedQueryConfig,
+  type SQLiteExecuteMethod,
   SQLiteSession,
-  SQLiteSyncDialect,
-  SQLiteTransactionConfig,
-  SelectedFieldsOrdered,
+  type SQLiteSyncDialect,
+  type SQLiteTransactionConfig,
+  type SelectedFieldsOrdered,
   SQLiteTransaction
 } from 'drizzle-orm/sqlite-core'
 import * as utils from 'drizzle-orm/utils'
 import { SQLitePreparedQuery as PreparedQueryBase } from 'drizzle-orm/sqlite-core/session'
-import { RunResult } from './utils.ts'
-import { Database, Statement } from '@db/sqlite'
-import { NoopCache, Cache } from 'drizzle-orm/cache/core'
-import { WithCacheConfig } from 'drizzle-orm/cache/core/types'
+import type { RunResult } from './utils.ts'
+import type { Database, Statement } from '@db/sqlite'
+import { NoopCache, type Cache } from 'drizzle-orm/cache/core'
+import type { WithCacheConfig } from 'drizzle-orm/cache/core/types'
 
 // % DBSQLiteSession %
 export class DBSQLiteSession<
