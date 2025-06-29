@@ -37,6 +37,9 @@ export const drizzle = <
 }
 
 // %% DBSQLiteDatabase %%
+/**
+ * Database instance.
+ */
 export class DBSQLiteDatabase<
   TSchema extends Record<string, unknown> = Record<string, never>
 > extends BaseSQLiteDatabase<'sync', RunResult, TSchema> {

@@ -1,9 +1,7 @@
-Adapter for drizzle-orm and jsr:@db/sqlite
-
 - Install dependencies
 
 ```sh
-deno add jsr:@db/sqlite npm:@drizzle-orm jsr:@niuiic/drizzle-orm-dbsqlite
+deno add jsr:@db/sqlite npm:drizzle-orm jsr:@niuiic/drizzle-orm-dbsqlite
 ```
 
 - Quick start

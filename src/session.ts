@@ -27,6 +27,9 @@ import { NoopCache, type Cache } from 'drizzle-orm/cache/core'
 import type { WithCacheConfig } from 'drizzle-orm/cache/core/types'
 
 // % DBSQLiteSession %
+/**
+ * Database session instance.
+ */
 export class DBSQLiteSession<
   TFullSchema extends Record<string, unknown>,
   TSchema extends TablesRelationalConfig
@@ -98,6 +101,9 @@ const { mapResultRow } = utils as any as {
 }
 
 // % PrepareQuery %
+/**
+ * Prepared query instance.
+ */
 export class PreparedQuery<
   T extends Omit<PreparedQueryConfig, 'run'> = PreparedQueryConfig
 > extends PreparedQueryBase<{
@@ -204,6 +210,9 @@ export class PreparedQuery<
 }
 
 // % DBSQLiteTransaction %
+/**
+ * Database transaction instance.
+ */
 export class DBSQLiteTransaction<
   TFullSchema extends Record<string, unknown>,
   TSchema extends TablesRelationalConfig
